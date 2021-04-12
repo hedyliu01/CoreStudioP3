@@ -34,47 +34,47 @@ function gotAllArts(err) {
     return;
   }
   // call functions to log and show the books
-  consoleLogSongs();
+  consoleLogArts();
   showArts();
 }
 
 // just loop through the books and console.log them
-function consoleLogSongs() {
+function consoleLogArts() {
   console.log("consoleLogSongs()");
   arts.forEach(art => {
-    console.log("Arts:", fruit);
-    console.log(fruit.fields.artPictures[0].url);
+    console.log("Arts:", art);
+    console.log(art.fields.artPictures[0].url);
   });
 }
 
 // look through our airtable data, create elements
 function showArts() {
-  console.log("showSongs()");
+  console.log("showArts()");
   arts.forEach(art => {
-    // create container for each fruit
+    // create container for each art
     var artContainer = document.createElement("div");
-    artContainer.classList.add("song-container");
+    artContainer.classList.add("art-container");
     document.querySelector(".container").append(artContainer);
   
-    // add all the fruit names as h1 
+    // add all the art names as h1 
     var artName = document.createElement("h1");
-    artName.classList.add("song-title");
+    artName.classList.add("art-title");
     artName.innerText = art.fields.artName;
     artContainer.append(artName);
     
     // add all the pics 
     var artPictures = document.createElement("img");
-    artPictures.classList.add("song-image");
+    artPictures.classList.add("art-image");
     artPictures.src = art.fields.artpictures[0].url;
     artContainer.append(artPictures);
 
-    // create a css class for each fruit with corresponding fruit color 
+    // create a css class for each art with corresponding fruit color 
     var artColors = fruit.fields.fruitColor;
     artColors.forEach(function(color) {
       artContainer.classList.add(color);
     });
 
-    // when press button for red, get red fruit color by looking for .Red class added by line 75-77
+    // when press button for red, get red art color by looking for .Red class added by line 75-77
     var filterRed = document.querySelector(".lettera");
     filterRed.addEventListener("click", function() {
       if (artContainer.classList.contains("lettera")) {
