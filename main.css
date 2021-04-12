@@ -8,19 +8,19 @@ body {
   
   h1 {
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
   }
   
-  .song-description {
+  .art-description {
     display: none;
   }
   
-  .song-description.active {
+  .art-description.active {
     display: block;
   }
   
-  .song-image {
+  .art-image {
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -28,40 +28,68 @@ body {
     
   }
   
-  .song-image.active {
+  .art-image.active {
     display: block;
   }
+
+  .color-menu{
+    display:flex;
+  }
+
+  .color-filter{
+    font-size: 25px;
+  }
+
   
-  .song-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+  .art-container {
     padding: 1rem;
     box-sizing: border-box;
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 0px;
+    flex-basis: 40%;
+    margin:20px;
+  }
+
+  .grid-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-basis:80%;
   }
   
   .image-container {
-    width: 100%;
+    width: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
-  .song-container:hover {
-    border: 1px solid black;
-    border-radius: 25px;
+  .art-container:hover {
+    border: 3px solid black;
     cursor: pointer;
   }
   
-  .song-container.active .song-title {
+  .art-container.active .art-title {
     display: block;
   }
+
   
   .filter {
-    padding: 2rem;
+    font-size: 25px;
+    margin-bottom: 60px;
     cursor: pointer;
   }
   
-  
+  ::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: grey;
+   }
+   ::-webkit-scrollbar-track{
+    background: white;
+    border-radius: 0px;
+   }
