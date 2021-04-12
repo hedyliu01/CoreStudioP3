@@ -304,6 +304,43 @@ function showArts() {
         resetAll.addEventListener("click", function() {
           artContainer.style.display = "block";
         });
+
+    // add Letter as a class to each corresponding art containing 
+    var artColors = art.fields.artColors;
+    artContainer.classList.add(artColors)
+
+    // filter by Color Warm
+    var filterWARM = document.querySelector(".warm");
+    filterWARM.addEventListener("click", function() {
+      if (artContainer.classList.contains("Warm")) {
+        artContainer.style.display = "block";
+      } else {
+        artContainer.style.display = "none";
+      }
+    });
+     // filter by Color Cold
+     var filterCOLD = document.querySelector(".cold");
+     filterCOLD.addEventListener("click", function() {
+       if (artContainer.classList.contains("Cold")) {
+         artContainer.style.display = "block";
+       } else {
+         artContainer.style.display = "none";
+       }
+     });
+     // filter by Color Monochrome
+     var filterMONOCHROME = document.querySelector(".monochrome");
+     filterMONOCHROME.addEventListener("click", function() {
+       if (artContainer.classList.contains("Monochrome")) {
+         artContainer.style.display = "block";
+       } else {
+         artContainer.style.display = "none";
+       }
+     });
+   // reset all
+   var resetAll = document.querySelector(".js-reset");
+   resetAll.addEventListener("click", function() {
+     artContainer.style.display = "block";
+   });
         
   });
 }
