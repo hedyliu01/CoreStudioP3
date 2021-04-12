@@ -341,6 +341,8 @@ function showArts() {
    resetAll.addEventListener("click", function() {
      artContainer.style.display = "block";
    });
+
+
         
   });
 }
