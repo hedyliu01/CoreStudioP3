@@ -38,6 +38,8 @@ body {
 
   .color-filter{
     font-size: 25px;
+    position:fixed;
+    margin-top: 200px;
   }
 
   
@@ -54,6 +56,8 @@ body {
     display:flex;
     flex-wrap: wrap;
     flex-basis:80%;
+    margin-left: 340px;
+    margin-top: 100px;
   }
   
   .image-container {
@@ -76,7 +80,126 @@ body {
     font-size: 25px;
     margin-bottom: 60px;
     cursor: pointer;
+    position:fixed;
   }
+
+.lettera:hover{
+  text-transform: lowercase;
+}
+
+.letterb:hover{
+  text-transform: lowercase;
+}
+
+.letterc:hover{
+  text-transform: lowercase;
+}
+
+.letterd:hover{
+  text-transform: lowercase;
+}
+
+.lettere:hover{
+  text-transform: lowercase;
+}
+
+.letterf:hover{
+  text-transform: lowercase;
+}
+
+.letterg:hover{
+  text-transform: lowercase;
+}
+
+.letterh:hover{
+  text-transform: lowercase;
+}
+
+.letteri:hover{
+  text-transform: lowercase;
+}
+
+.letterj:hover{
+  text-transform: lowercase;
+}
+
+.letterk:hover{
+  text-transform: lowercase;
+}
+
+.letterl:hover{
+  text-transform: lowercase;
+}
+
+.letterm:hover{
+  text-transform: lowercase;
+}
+
+.lettern:hover{
+  text-transform: lowercase;
+}
+
+.lettero:hover{
+  text-transform: lowercase;
+}
+
+.letterp:hover{
+  text-transform: lowercase;
+}
+
+.letterq:hover{
+  text-transform: lowercase;
+}
+
+.letterr:hover{
+  text-transform: lowercase;
+}
+
+.letters:hover{
+  text-transform: lowercase;
+}
+
+.lettert:hover{
+  text-transform: lowercase;
+}
+
+.letteru:hover{
+  text-transform: lowercase;
+}
+
+.letterv:hover{
+  text-transform: lowercase;
+}
+
+.letterw:hover{
+  text-transform: lowercase;
+}
+
+.letterx:hover{
+  text-transform: lowercase;
+}
+
+.lettery:hover{
+  text-transform: lowercase;
+}
+
+.letterz:hover{
+  text-transform: lowercase;
+}
+
+.warm:hover{
+  font-size: smaller;
+}
+
+.cold:hover{
+  font-size: smaller;
+}
+
+.monochrome:hover{
+  font-size: smaller;
+}
+
+
   
   ::-webkit-scrollbar {
     width: 17px;
@@ -102,4 +225,42 @@ body {
     border-radius: 0px;
     flex-basis: 40%;
     margin:5px;
+}
+
+.modal-container {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: none;
+}
+
+.modal-box {
+  box-sizing: border-box;
+  background: white;
+  overflow-x: scroll;
+  position: relative;
+  height: auto;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.modal-image {
+    width: 200px;
+    height: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-is-active .modal-container {
+  display: flex;
 }

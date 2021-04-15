@@ -343,6 +343,65 @@ function showArts() {
    });
 
 
-        
+// look through our airtable data, create elements and place on page
+function showArts() {
+  console.log("showArts()");
+  arts.forEach((art) => {
+   // create a container for each art. name it "art-container"
+   var artContainer = document.createElement("div");
+   artContainer.classList.add("art-container");
+   document.querySelector(".grid-section").append(artContainer);
+
+    // add image to each art container
+    var artPictures = document.createElement("img");
+    artPictures.classList.add("art-image");
+    artPictures.classList.add("js-modal-toggle");
+    artPictures.src = art.fields.art_image[0].url;
+    artContainer.append(artPictures);
+
+    // add modal to art container
+    var modalContainer = document.createElement("div");
+    modalContainer.classList.add("modal-container");
+    artContainer.append(modalContainer);
+
+    // add modal box to modal container
+    var modalBox = document.createElement("div");
+    modalBox.classList.add("modal-box");
+    modalContainer.append(modalBox);
+
+    // add image to modal box
+    var modalImage = document.createElement("img");
+    modalImage.classList.add("modal-image");
+    modalImage.src = art.fields.art_image[0].url;
+    modalBox.append(modalImage);
+
+    // add close button to modal box
+    var closeModalBtn = document.createElement("div");
+    closeModalBtn.classList.add("modal-close-btn");
+    closeModalBtn.classList.add("js-modal-toggle");
+    closeModalBtn.innerHTML = "Close";
+    modalBox.append(closeModalBtn);
+
   });
+});
+
+
+     // find all of our modals
+  let modals = document.querySelectorAll(".art-container");
+
+  // check if there are any modals
+  if (modals) {
+    modals.forEach((modal) => {
+      // find each toggle within the specific modal
+      const toggles = modal.querySelectorAll(".js-modal-toggle");
+
+      // add click listener to each toggle
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          // Toggle the active state of the modal
+          modal.classList.toggle("modal-is-active");
+        });
+      });
+    });
+  }
 }
