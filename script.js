@@ -343,21 +343,18 @@ function showArts() {
    });
 
 
-// look through our airtable data, create elements and place on page
-function showArts() {
-  console.log("showArts()");
-  arts.forEach((art) => {
+
    // create a container for each art. name it "art-container"
    var artContainer = document.createElement("div");
    artContainer.classList.add("art-container");
    document.querySelector(".grid-section").append(artContainer);
 
     // add image to each art container
-    var artPictures = document.createElement("img");
-    artPictures.classList.add("art-image");
-    artPictures.classList.add("js-modal-toggle");
-    artPictures.src = art.fields.art_image[0].url;
-    artContainer.append(artPictures);
+    var artContainer = document.createElement("img");
+    artContainer.classList.add("art-image");
+    artContainer.classList.add("js-modal-toggle");
+    artContainer.src = art.fields.art_image[0].url;
+    artContainer.append(artContainer);
 
     // add modal to art container
     var modalContainer = document.createElement("div");
@@ -383,7 +380,6 @@ function showArts() {
     modalBox.append(closeModalBtn);
 
   });
-});
 
 
      // find all of our modals
@@ -404,4 +400,5 @@ function showArts() {
       });
     });
   }
+
 }
