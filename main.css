@@ -234,25 +234,26 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: bottom;
   z-index: 100;
   display: none;
 }
 
 .modal-box {
   box-sizing: border-box;
-  background: white;
+  background: lightyellow;
   overflow-x: scroll;
   position: relative;
   height: auto;
-  max-width: 600px;
+  max-width: 1000px;
   padding: 2rem;
 }
 
 .modal-image {
-    width: 200px;
+    width: 600px;
     height: auto;
+    margin-top: 20px;
 }
 
 .modal-close-btn {
